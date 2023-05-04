@@ -5,7 +5,7 @@ const bookSchema = mongoose.Schema(
     userID: String,
     BookImg: String,
     BookTitle: String,
-    BookAuthor: String,
+    BookAuthor: Array,
     BookPrice: Number,
   },
   {
