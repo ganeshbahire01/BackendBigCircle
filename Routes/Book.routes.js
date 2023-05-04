@@ -8,7 +8,7 @@ bookRouter.post("/addBook", async function (req, res) {
     await book.save();
     res.status(200).send({ message: "Book saved successfully" });
   } catch (error) {
-    res.status(400).send({ message: err.message });
+    res.status(400).send({ message: error.message });
   }
 });
 
@@ -17,7 +17,7 @@ bookRouter.get("/", async function (req, res) {
     let Books = await BookModel.find({ userID: req.body.userID });
     res.status(200).send(Books);
   } catch (error) {
-    res.status(400).send({ message: err.message });
+    res.status(400).send({ message: error.message });
   }
 });
 
