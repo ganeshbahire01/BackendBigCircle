@@ -12,9 +12,9 @@ bookRouter.post("/addBook", async function (req, res) {
   }
 });
 
-bookRouter.get("/", async function (req, res) {
+bookRouter.get("/:id", async function (req, res) {
   try {
-    let Books = await BookModel.find({ userID: req.body.userID });
+    let Books = await BookModel.find({ userID: req.params.id });
     res.status(200).send(Books);
   } catch (error) {
     res.status(400).send({ message: error.message });
