@@ -4,9 +4,14 @@ const bookRouter = express.Router();
 
 bookRouter.post("/addBook", async function (req, res) {
   try {
-    const book = new BookModel(req.body);
-    await book.save();
-    res.status(200).send({ message: "Book saved successfully" });
+    const isBook = await UserModel.find({ BookTitle: req.body.BookTitle });
+    if (isBook.length > 0) {
+      res.status(200).send({ message: "Book already in Reading List" });
+    } else {
+      const book = new BookModel(req.body);
+      await book.save();
+      res.status(200).send({ message: "Book saved successfully" });
+    }
   } catch (error) {
     res.status(400).send({ message: error.message });
   }
