@@ -4,7 +4,7 @@ const bookRouter = express.Router();
 
 bookRouter.post("/addBook", async function (req, res) {
   try {
-    const isBook = await UserModel.find({ BookTitle: req.body.BookTitle });
+    const isBook = await BookModel.find({ BookTitle: req.body.BookTitle });
     if (isBook.length > 0) {
       res.status(200).send({ message: "Book already in Reading List" });
     } else {
