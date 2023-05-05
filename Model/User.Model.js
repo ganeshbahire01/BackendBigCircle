@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// Schema of User with types
 const userSchema = mongoose.Schema(
   {
     email: {
@@ -18,6 +19,7 @@ const userSchema = mongoose.Schema(
   }
 );
 
+// users Model With Collect name - users
 const UserModel = mongoose.model("user", userSchema);
 
 module.exports = UserModel;
