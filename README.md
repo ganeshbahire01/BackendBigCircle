@@ -22,6 +22,13 @@
 - Storing Data to Mongo DB .
 - Deployed On cyclic - API - https://exuberant-battledress-clam.cyclic.app/
 <br />
+## 🚀 How To Use It Locally
+- Clone Repo --- git clone https://github.com/ganeshbahire01/BackendBigCircle.git .
+- Install All Dependecies --- npm i .
+- Run Locally use --- npm run start.
+- It's Start Server on Port number 8080
+- So in Browser use   --- http://localhost:8080/ -- local API .
+<br />
 
 ## 🚀 Data Format on MongoDB
 - User Data Formate:- 
