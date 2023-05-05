@@ -1,6 +1,6 @@
 <h1 align="center">Books-Shop Backend - Assignment 1</h1> 
 
-<h2 align="center">Books Shop is E- Book reading platfor where we can pick any book and read it after reaading you can remove it from list</h2>
+<h2 align="center">Books Shop is E- Book reading platfor where we can pick any book and read it after reaading you can remove it from list main Task is to Create API for login Signup Add Book or Remove book</h2>
 
 <br />
 <p align="center">
@@ -21,6 +21,25 @@
 - Removing perticular Book data On request.
 - Storing Data to Mongo DB .
 - Deployed On cyclic - API - https://exuberant-battledress-clam.cyclic.app/
+<br />
+
+## 🚀 Data Format on MongoDB
+- User Data Formate:- 
+    - {_id:6453ab78df7c312758d5a227,
+      email:"ganesh@gmail.com",
+      password:"$2b$04$nwyTwn2tMzGC4ok1y/KNaOpjrWuGvllQKwXP7PXAtpFtGuwE3jsf6",
+      mobile:12345}
+- Password are in Encrypted Formate - bcrypt
+- Books Data Formates
+   - {_id:6453d252a4eeb7883d1dc9e7,
+        userID:"6453ad630a12b8126da83a7a",
+        BookImg:"http://books.google.com/books/content?id=tjjrDwAAQBAJ&printsec=frontco…",
+        BookTitle:"Learning React",
+        BookAuthor[
+            "Alex Banks" 
+            "Eve Porcello"],
+         BookPrice:3764.2
+    }
 <br />
 
 ## 🚀 Registration 
