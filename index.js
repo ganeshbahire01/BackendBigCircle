@@ -3,6 +3,7 @@ const userRouter = require("./Routes/User.routes");
 const connection = require("./db");
 const cors = require("cors");
 const bookRouter = require("./Routes/Book.routes");
+const auth = require("./Middlewares/Auth.middleware");
 
 const app = express();
 // cors for Cors Origin aerror It Allow to Acces Cross Origin Site Request
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 
 // Routes user and book routes
 app.use("/users", userRouter);
+app.use(auth);
 app.use("/books", bookRouter);
 
 // for listing on locallay on port number 8080
