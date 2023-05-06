@@ -92,7 +92,7 @@
 <br />
 
 ## 🚀 Add Book to Readlist 
-- POST Request with payload -- req.body({email,mobile,password}).
+- POST Request with user ID as params.
 - API - https://exuberant-battledress-clam.cyclic.app/books/addBook
 - Succesfully Adding Books to DB. 
    - Response :- {
